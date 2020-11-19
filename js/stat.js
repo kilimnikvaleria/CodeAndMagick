@@ -9,7 +9,7 @@ window.renderStatistics = function (ctx, names, times) {
         _cloudPaddingTop: 35,
         _cloudPadding: 57,
 
-        cloudColor: ['rgba(0, 0, 0, 0.7)', 'rgb(256, 256, 256)'],
+        cloudColors: ['rgba(0, 0, 0, 0.7)', 'rgb(256, 256, 256)'],
         cloudText: ['Ура вы победили!', 'Список результатов: '],
 
         renderCloud: function (shadow) {
@@ -17,11 +17,11 @@ window.renderStatistics = function (ctx, names, times) {
             heigth = this._cloudHeight;
             x = this.startX;
             y = this.startY;
-            color = this.cloudColor[1];
+            color = this.cloudColors[1];
             if (shadow) {
                 x = this.startX + this._lengthShadow;
                 y = this.startY + this._lengthShadow;
-                color = this.cloudColor[0];
+                color = this.cloudColors[0];
             }
             ctx.fillStyle = color;
             var offset = 10;
