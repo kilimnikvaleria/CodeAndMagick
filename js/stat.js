@@ -10,7 +10,7 @@ window.renderStatistics = function (ctx, names, times) {
         _cloudPadding: 57,
 
         cloudColors: ['rgba(0, 0, 0, 0.7)', 'rgb(256, 256, 256)'],
-        cloudText: ['Ура вы победили!', 'Список результатов: '],
+        cloudTexts: ['Ура вы победили!', 'Список результатов: '],
 
         renderCloud: function (shadow) {
             width = this._cloudWidth;
@@ -43,8 +43,8 @@ window.renderStatistics = function (ctx, names, times) {
             ctx.fillStyle = '#000';
             ctx.font = '16px PT Mono';
 
-            for (var i = 0; i < this.cloudText.length; i++) {
-                ctx.fillText(this.cloudText[i], this.startX + this._cloudPadding, this.startY  + this._cloudPaddingTop + i * this._cloudPaddingTop/2);
+            for (var i = 0; i < this.cloudTexts.length; i++) {
+                ctx.fillText(this.cloudTexts[i], this.startX + this._cloudPadding, this.startY  + this._cloudPaddingTop + i * this._cloudPaddingTop/2);
             }
         }
     };
@@ -82,7 +82,7 @@ window.renderStatistics = function (ctx, names, times) {
         },
 
         drawHistogram: function (arrayTimes, arrayNames) {
-            var maxTime = this.getMaxTime(times);
+            var maxTime = this.getMaxTime(arrayTimes);
             console.log(this.startCoord);
             for (var i = 0; i < arrayNames.length; i++) {
                 ctx.fillStyle = this.fillBarColor(arrayNames[i]);
