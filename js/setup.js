@@ -14,11 +14,8 @@ var getWizards = function () {
         coatColors: [ "rgb(101, 137, 164)", "rgb(241, 43, 107)", "rgb(146, 100, 161)", "rgb(56, 159, 117)", "rgb(215, 210, 55)", "rgb(0, 0, 0)" ],
         eyesColors: [ "black", "red", "blue", "yellow", "green" ],
         getRandomElement: function (array) {
-            for (var i = 0; i < array.length; i++) {
-                var randomIndex = Math.floor(Math.random() * array.length);
-                var randomElement = array[randomIndex];
-            }
-            return randomElement;
+            var randomIndex = Math.floor(Math.random() * array.length);
+            return array[randomIndex];
         },
 
         getRandomData: function () {
